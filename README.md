@@ -26,8 +26,8 @@ Installation on Debian:
 ### Version check
 To check if you have the latest version installed, run `rkhunter --versioncheck`.
 
-### Updates
-First we have to check for updates:
+### Update databases
+First we have to check for database updates:
 `rkhunter --update`
 ```sh
 [ Rootkit Hunter version 1.4.2 ]
