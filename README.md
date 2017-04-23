@@ -45,7 +45,10 @@ To update databases run: `rkhunter --propupd`
 File updated: searched for 176 files, found 146
 ```
 
-To run scanning process: `rkhunter -c -sk`
+To run scanning process: `rkhunter -c -sk --disable none`  
+By default application checks are skipped, we include them by usin option `--disable none`.  
+By defalt after each test you have to press Enter, `-sk` option will skip it.
+
 ```sh
 Checking the local host...
 
@@ -87,7 +90,8 @@ Rootkit checks...
     Possible rootkits: 0
 
 Applications checks...
-    All checks skipped
+    Applications checked: 4
+    Suspect applications: 0
 
 The system checks took: 35 seconds
 
