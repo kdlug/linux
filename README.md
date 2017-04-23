@@ -143,7 +143,7 @@ Then create a new file /etc/cron.daily/rkhunter.sh, with 775 permissions `chmod 
 #!/bin/sh
 (
 /usr/bin/rkhunter --versioncheck
-/usr/bin/rkhunter --update
+/usr/bin/rkhunter --propupd
 /usr/bin/rkhunter --cronjob --report-warnings-only
 ) 2>&1 | /usr/bin/mail -s "RKhunter Scanning Report" email@example.com
 ```
