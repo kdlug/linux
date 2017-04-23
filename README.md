@@ -21,7 +21,11 @@ Checking `dirname'...                                       not infected
 A tool for scanning system for suspicous rootkits, backdoors and exploits.  
 ### Installation
 Installation on Debian:
-`apt-get install rkhunter`  
+`apt-get install rkhunter` 
+
+### Version check
+To check if you have the latest version installed, run `rkhunter --versioncheck`.
+
 ### Updates
 First we have to check for updates:
 `rkhunter --update`
