@@ -5,6 +5,7 @@ Installation od Debian:
 `apt-get install chkrootkit`  
 Run: `chrootkit`
 ```sh
+root@debian:~# chrootkit
 ROOTDIR is `/'
 Checking `amd'...                                           not found
 Checking `basename'...                                      not infected
