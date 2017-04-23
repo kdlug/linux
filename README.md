@@ -31,6 +31,7 @@ To check if you have the latest version installed, run `rkhunter --versioncheck`
 First we have to check for database updates:
 `rkhunter --update`
 ```sh
+root@debian:~# rkhunter --update
 [ Rootkit Hunter version 1.4.2 ]
 
 Checking rkhunter data files...
@@ -57,6 +58,7 @@ By default application checks are skipped, we include them by usin option `--dis
 By defalt after each test you have to press Enter, `-sk` option will skip it.
 
 ```sh
+root@debian:~# rkhunter --check --skip-keypress --disable none
 Checking the local host...
 
   Performing system boot checks
@@ -126,6 +128,7 @@ To perform config file check after changing `/etc/rkhunter.conf` use `rkhunter -
 To report only warnigs you can add an option `--report-warnings-only`. It can be useful for periodically scans your system and send some alert reports.  
 `rkhunter --check --skip-keypress --disable none --report-warnings-only`
 ```ssh
+root@debian:~# rkhunter --check --skip-keypress --disable none --report-warnings-only
 Warning: The following processes are using deleted files:
          Process: /usr/bin/docker-containerd    PID: 692    File: /run/containerd/c89337887122d768531bef8e0bceb64fdc3c0fa6802786127d91d169581dab04/init/control
          Process: /usr/sbin/mysqld    PID: 1631    File:
