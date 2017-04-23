@@ -139,7 +139,7 @@ Warning: Process '/sbin/dhclient' (PID 477) is listening on the network.
 ### Set up cron
 In order to set up periodically system scanning / reporting via cron, we have to check rhunter and mail paths `whereis rkhunter` and `whereis mail`.
 Then create a new file /etc/cron.daily/rkhunter.sh, with 775 permissions `chmod 755 etc/cron.daily/rkhunter.sh`.
-``sh
+```sh
 #!/bin/sh
 (
 /usr/bin/rkhunter --versioncheck
