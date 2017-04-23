@@ -101,6 +101,6 @@ If you want to disable some warnings, f.ex.
 ```sh
 Checking if SSH root access is allowed                   [ Warning ]
 ```
-You have to edit config file o `vi /etc/rkhunter.conf` and change (uncomment) the value `ALLOW_SSH_ROOT_USER=no` to `ALLOW_SSH_ROOT_USER=yes`.
+You have to edit config file `vi /etc/rkhunter.conf` and change (uncomment) the value `ALLOW_SSH_ROOT_USER=no` to `ALLOW_SSH_ROOT_USER=yes`.
 
 
