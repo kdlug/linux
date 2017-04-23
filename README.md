@@ -116,7 +116,7 @@ vi /etc/ssh/sshd_config
 PermitRootLogin without-password
 ...
 ```
-To perform config file check after changing `/etc/rkhunter.conf` use `rkhunter -C` command.
+To perform config file check after changing `/etc/rkhunter.conf` use `rkhunter --config-check` command.
 ### Report only warnings
 To report only warnigs you can add an option `--report-warnings-only`. It can be useful for periodically scans your system and send some alert reports.  
 `rkhunter --check --skip-keypress --disable none --report-warnings-only`
