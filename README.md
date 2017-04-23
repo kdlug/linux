@@ -47,7 +47,7 @@ To update databases run: `rkhunter --propupd`
 File updated: searched for 176 files, found 146
 ```
 ### Run
-To run scanning process: `rkhunter -c -sk --disable none`  
+To run scanning process: `rkhunter --check --skip-keypress --disable none`  
 By default application checks are skipped, we include them by usin option `--disable none`.  
 By defalt after each test you have to press Enter, `-sk` option will skip it.
 
@@ -119,7 +119,7 @@ PermitRootLogin without-password
 To perform config file check after changing `/etc/rkhunter.conf` use `rkhunter -C` command.
 ### Report only warnings
 To report only warnigs you can add an option `--report-warnings-only`. It can be useful for periodically scans your system and send some alert reports.  
-`rkhunter -c -sk --disable none --report-warnings-only`
+`rkhunter --check --skip-keypress --disable none --report-warnings-only`
 ```ssh
 Warning: The following processes are using deleted files:
          Process: /usr/bin/docker-containerd    PID: 692    File: /run/containerd/c89337887122d768531bef8e0bceb64fdc3c0fa6802786127d91d169581dab04/init/control
