@@ -18,9 +18,11 @@ Checking `du'...                                            not infected
 Checking `dirname'...                                       not infected
 ```
 ## rkhunter
-A tool for scanning system for suspicous rootkits, backdoors and exploits.   
+A tool for scanning system for suspicous rootkits, backdoors and exploits.  
+### Installation
 Installation on Debian:
 `apt-get install rkhunter`  
+### Updates
 First we have to check for updates:
 `rkhunter --update`
 ```sh
@@ -44,7 +46,7 @@ To update databases run: `rkhunter --propupd`
 [ Rootkit Hunter version 1.4.2 ]
 File updated: searched for 176 files, found 146
 ```
-
+### Run
 To run scanning process: `rkhunter -c -sk --disable none`  
 By default application checks are skipped, we include them by usin option `--disable none`.  
 By defalt after each test you have to press Enter, `-sk` option will skip it.
@@ -101,6 +103,8 @@ One or more warnings have been found while checking the system.
 Please check the log file (/var/log/rkhunter.log)
 
 ```
+
+### Disable selected warnings
 If you want to disable some warnings, f.ex.  
 ```sh
 Checking if SSH root access is allowed                   [ Warning ]
@@ -111,4 +115,16 @@ vi /etc/ssh/sshd_config
 ...
 PermitRootLogin without-password
 ...
+```
+To perform config file check after changing `/etc/rkhunter.conf` use `rkhunter -C` command.
+### Report only warnings
+To report only warnigs you can add an option `--report-warnings-only`. It can be useful for periodically scans your system and send some alert reports.  
+`rkhunter -c -sk --disable none --report-warnings-only`
+```ssh
+Warning: The following processes are using deleted files:
+         Process: /usr/bin/docker-containerd    PID: 692    File: /run/containerd/c89337887122d768531bef8e0bceb64fdc3c0fa6802786127d91d169581dab04/init/control
+         Process: /usr/sbin/mysqld    PID: 1631    File:
+         Process: /usr/sbin/mysqld    PID: 1770    File:
+         Process: /usr/sbin/mysqld    PID: 2290    File:
+Warning: Process '/sbin/dhclient' (PID 477) is listening on the network.
 ```
